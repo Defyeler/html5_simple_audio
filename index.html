@@ -1,0 +1,14 @@
+<div class="audioPlayer audioBack">
+    <div class="volumeShell">
+        <input id="audioVolume" class="audioVolume" type="range"  min="0" max="100" value="10" onchange="setVolume(this.value)" oninput="setVolume(this.value)"/>
+        <div class="minVol audioButton"><img class="minVolImg" src="images/audio_volMin.png" title="mute volume"></div>
+        <div class="maxVol audioButton"><img class="maxVolImg" src="images/audio_volMax.png" title="max volume"></div>
+    </div>
+
+    <div class="prev audioButton"><img class="prevImg" src="images/audio_prev.png" title="previous song"></div>
+    <div class="play audioButton"><img class="playImg" src="images/audio_play.png" title="play"></div>
+    <div class="pause audioButton"><img class="pauseImg" src="images/audio_pause.png" title="pause"></div>
+    <div class="next audioButton"><img class="nextImg" src="images/audio_next.png" title="next song"></div>
+    <div class="volControl audioButton"><img class="maxVolImg" src="images/audio_volMax.png" title="volume control"></div>
+    <div class="trackName"></div>
+</div>
