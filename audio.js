@@ -1,4 +1,6 @@
 function loadSong(which,dir){
+	
+	var sDir='audio/'; // Directory of song location.
 	// First array is file name of songs. Second array is the visual name of song that will display on the bar of the player.
 	allSongs=['lg','always','aty','dtily','ikily','jtwya','ngcmlfy'];
 	songName=['遊戲愛情','Always','A Thousand Years','I Love You','I Know I\'ve Loved You','Just The Way You Are','Never Gonna Change My Love For You'];
@@ -23,13 +25,13 @@ function loadSong(which,dir){
 		gSong=nextTrack;
 	}
 		var cSong = new Audio();
-		// determine mime-type of audio compatability of web browser
+		// determine mime-type of audio compatability of web browser, then applies song.
 		if (cSong.canPlayType('audio/mpeg;')) {
 			cSong.type= 'audio/mpeg';
-			cSong.src='audio/'+allSongs[gSong]+'.mp3';
+			cSong.src=sDir+allSongs[gSong]+'.mp3';
 		} else {
 			cSong.type= 'audio/ogg';
-			cSong.src='audio/'+allSongs[gSong]+'.ogg';
+			cSong.src=sDir+allSongs[gSong]+'.ogg';
 		}		
 		
 		$('#trackName').remove();
