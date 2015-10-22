@@ -1,20 +1,20 @@
 function loadSong(which,dir){
-	
+	// First array is file name of songs. Second array is the visual name of song that will display on the bar of the player.
 	allSongs=['lg','always','aty','dtily','ikily','jtwya','ngcmlfy'];
 	songName=['遊戲愛情','Always','A Thousand Years','I Love You','I Know I\'ve Loved You','Just The Way You Are','Never Gonna Change My Love For You'];
 		
 	if(which=='new'){
-		gSong=Math.floor((Math.random() * 5) + 0);
+		gSong=Math.floor((Math.random() * allSong.length) + 0);
 	} else {
 		if (dir=='l'){
 			if(which==0){
-				nextTrack=5;
+				nextTrack=allSong.length;
 			} else {
 				nextTrack=Number(which - 1);
 			}				
 		} else {
 			if(which==5){
-				nextTrack=0;
+				nextTrack=allSong.length;
 			} else {
 				nextTrack=Number(which + 1);
 			}			
