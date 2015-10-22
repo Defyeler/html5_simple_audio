@@ -15,8 +15,8 @@ function loadSong(which,dir){
 				nextTrack=Number(which - 1);
 			}				
 		} else {
-			if(which==5){
-				nextTrack=allSong.length;
+			if(which==allSong.length){
+				nextTrack=0;
 			} else {
 				nextTrack=Number(which + 1);
 			}			
