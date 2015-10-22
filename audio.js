@@ -23,7 +23,7 @@ function loadSong(which,dir){
 		gSong=nextTrack;
 	}
 		var cSong = new Audio();
-	
+		// determine mime-type of audio compatability of web browser
 		if (cSong.canPlayType('audio/mpeg;')) {
 			cSong.type= 'audio/mpeg';
 			cSong.src='audio/'+allSongs[gSong]+'.mp3';
@@ -46,8 +46,8 @@ function loadSong(which,dir){
 
 function setVolume(value){
 	newVolume=(value/100);
-	document.getElementById("audioVolume").value=value;
-	document.getElementById("audioVolume").setAttribute('value',value);
+	document.getElementById("audioVolume").value=value; // Sets inline value to update slide knob
+	document.getElementById("audioVolume").setAttribute('value',value); // Sets actual volume value
 	cSong[0].volume=newVolume;
 }
 
